@@ -2,10 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
+#include <QStackedWidget>
+#include "player.h"
 
 class MainWindow : public QMainWindow
 {
@@ -13,10 +11,10 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    QStackedWidget * stackedWidget;
+    QList<Player> allPlayers;
 };
 
 #endif // MAINWINDOW_H

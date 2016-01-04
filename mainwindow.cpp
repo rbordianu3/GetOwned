@@ -1,14 +1,16 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "lineupsoverview.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    QMainWindow(parent)
 {
-    ui->setupUi(this);
-}
+    stackedWidget = new QStackedWidget();
 
-MainWindow::~MainWindow()
-{
-    delete ui;
+    LineupsOverview * lineupsOverview = new LineupsOverview();
+
+    stackedWidget->addWidget(lineupsOverview);
+
+    setCentralWidget(stackedWidget);
+
+
 }

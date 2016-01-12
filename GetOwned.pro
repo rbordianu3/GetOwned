@@ -16,14 +16,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    lineupsoverview.cpp \
     player.cpp \
-    lineup.cpp
+    lineup.cpp \
+    allplayerswidget.cpp \
+    lineupsoverviewwidget.cpp
 
 HEADERS  += mainwindow.h \
-    lineupsoverview.h \
     player.h \
-    lineup.h
+    lineup.h \
+    allplayerswidget.h \
+    lineupsoverviewwidget.h
 
 FORMS    += mainwindow.ui
 

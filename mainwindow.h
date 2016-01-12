@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QStackedWidget>
 #include "player.h"
+#include "lineupsoverviewwidget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -11,10 +12,17 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    QList<Player> allPlayers;
 
 private:
-    QStackedWidget * stackedWidget;
-    QList<Player> allPlayers;
+    QPushButton * importPlayers = nullptr;
+    QPushButton * importLineupsButton = nullptr;
+    QPushButton * newLineupButton = nullptr;
+    QPushButton * saveButton = nullptr;
+
+    LineupsOverviewWidget * lineupsOverview = nullptr;
+
+    void setupSignals();
 };
 
 #endif // MAINWINDOW_H

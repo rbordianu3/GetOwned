@@ -1,5 +1,5 @@
-QListView {
-    border-radius: 5px;
+QListView#bordered {
+    border: 1px solid #000;
 }
 
 QListView::item {
@@ -11,4 +11,12 @@ QListView::item {
 QListView::item:selected {
     color: #fff;
     background: #1175e3;
+}
+
+QWidget#bordered {
+    border: 1px solid #000;
+}
+
+QTabWidget::pane#bordered {
+    border: 1px solid #000;
 }

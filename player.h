@@ -9,13 +9,15 @@ class Player : public QWidget
 {
     Q_OBJECT
 public:
-    explicit Player(QString playerName, int playerSalary, QString playerPosition, QWidget *parent = 0);
+    explicit Player(QString playerName, QString playerSalary, QString playerPosition, QWidget *parent = 0);
+    explicit Player(QWidget *parent = 0);
 
     QString getName();
     void setName(QString value);
 
     int getSalary();
     void setSalary(int value);
+    void setSalary(QString value);
 
     QString getPosition();
     void setPosition(QString value);

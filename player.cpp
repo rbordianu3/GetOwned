@@ -2,11 +2,27 @@
 #include "QHBoxLayout"
 
 
-Player::Player(QString playerName, int playerSalary, QString playerPosition, QWidget *parent) : QWidget(parent)
+Player::Player(QString playerName, QString playerSalary, QString playerPosition, QWidget *parent) : QWidget(parent)
 {
     name = new QLabel(playerName);
-    salary = new QLabel(QString::number(playerSalary));
+    salary = new QLabel(playerSalary);
     position = new QLabel(playerPosition);
+
+    deleteButton  = new QPushButton("X");
+
+    QHBoxLayout * hbox = new QHBoxLayout();
+    hbox->addWidget(name, 3);
+    hbox->addWidget(salary, 1);
+    hbox->addWidget(position, 1);
+
+    setLayout(hbox);
+}
+
+Player::Player(QWidget *parent) : QWidget(parent)
+{
+    name = new QLabel();
+    salary = new QLabel();
+    position = new QLabel();
 
     deleteButton  = new QPushButton("X");
 
@@ -36,6 +52,11 @@ int Player::getSalary()
 void Player::setSalary(int value)
 {
     salary->setText(QString::number(value));
+}
+
+void Player::setSalary(QString value)
+{
+    salary->setText(value);
 }
 
 QString Player::getPosition()

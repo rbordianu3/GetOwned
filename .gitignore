@@ -1,0 +1,12 @@
+*.autosave
+*.pro.user*
+build-*
+*.o
+AqmUI
+moc*
+*.swp
+*~
+*.orig
+Makefile.generated
+qrc_aqmui.cpp
+documentation/

@@ -4,16 +4,17 @@
 #include <QWidget>
 #include <QListWidget>
 #include <QVBoxLayout>
+#include "allplayerswidget.h"
 
-class LineupsOverview : public QWidget
+class LineupsOverviewWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit LineupsOverview(QWidget *parent = 0);
+    explicit LineupsOverviewWidget(QWidget *parent = 0);
+    AllPlayersWidget * allPlayersWidget = nullptr;
 
 private:
-    QListWidget * lineupList = 0;
-    QVBoxLayout * playerList = 0;
+
 signals:
 
 public slots:
